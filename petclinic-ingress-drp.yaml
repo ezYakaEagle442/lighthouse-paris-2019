@@ -1,10 +1,11 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: petclinic
+  name: petclinic-drp
+  #namespace: staging
 spec:
   rules:
-  - host: petclinic.40.74.44.198.nip.io
+  - host: drp.akshandsonlabs.com
     http:
       paths:
       - backend:

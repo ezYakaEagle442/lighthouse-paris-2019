@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: petclinic-tm
+  #namespace: staging
+spec:
+  rules:
+  - host: lighthouseparis.trafficmanager.net
+    http:
+      paths:
+      - backend:
+          serviceName: petclinic-service
+          servicePort: 80
+        path: /
